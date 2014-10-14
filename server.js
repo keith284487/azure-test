@@ -2,7 +2,7 @@ var http = require("http");
 var express = require('express');
 var app = express();
 
-app.get('/', function(req, res) {
+app.get('/test', function(req, res) {
     res.send('Hello you there');
 });
 
