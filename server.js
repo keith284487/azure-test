@@ -2,13 +2,12 @@ var http = require("http");
 var express = require('express');
 var app = express();
 
-app.get('/test', function(req, res) {
-    res.send('Hello you there');
-});
 
+http.createServer(function (req, res) {
+res.writeHead(200, {"Content-Type": "text/plain"});
+res.end("Hello Node.js and Windows Azure Website!\n");
+}).listen(process.env.port);
 
-var server = app.listen(process.env.port, function() {
-    console.log('Listening on port %d', server.address().port);
-});
+;
  
 console.log("Server started.");
